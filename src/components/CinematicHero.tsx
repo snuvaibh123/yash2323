@@ -203,14 +203,7 @@ const CinematicHero: React.FC = () => {
                     window.open('https://youtu.be/zoLP2Q0k6dE?si=ynVrRWElYFoa8aHU', '_blank')
                   }
                 >
-                  <div className="relative w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20 group-hover:bg-white/20 transition-colors">
-                    <Play className="w-6 h-6 md:w-8 md:h-8 ml-1" />
-                    <motion.div
-                      className="absolute inset-0 rounded-full border-2 border-accent-gold/50"
-                      animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0, 0.5] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                    />
-                  </div>
+                  <Play className="w-6 h-6 md:w-8 md:h-8 ml-1" />
                   <span className="font-semibold text-lg md:text-xl">Watch Transformations</span>
                 </motion.button>
               </motion.div>
