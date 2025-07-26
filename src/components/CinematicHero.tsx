@@ -72,45 +72,8 @@ const CinematicHero: React.FC = () => {
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
-            <div className="relative w-80 h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]">
-              {/* Background Effects Container */}
-              <motion.div
-                className="absolute inset-0 flex items-center justify-center"
-                style={{
-                  background: 'radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%)',
-                  backdropFilter: 'blur(10px)',
-                  border: '2px solid rgba(212, 175, 55, 0.3)',
-                  boxShadow: '0 0 100px rgba(212, 175, 55, 0.3), inset 0 0 50px rgba(212, 175, 55, 0.1)'
-                }}
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: '0 0 150px rgba(212, 175, 55, 0.5), inset 0 0 80px rgba(212, 175, 55, 0.2)'
-                }}
-                transition={{ duration: 0.6 }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                  animate={{ x: ['-100%', '100%'] }}
-                  transition={{ duration: 3, repeat: Infinity, repeatDelay: 2, ease: "easeInOut" }}
-                />
-              </motion.div>
-              
-              {/* Logo Image - Separated */}
-              <motion.img
-                src="https://i.imgur.com/RXWtz5S.png"
-                alt="Champions Lifestyle Logo"
-                className="absolute inset-0 w-full h-full object-cover z-10"
-                onLoad={() => setLogoLoaded(true)}
-                initial={{ opacity: 0, scale: 1.2 }}
-                animate={{
-                  opacity: logoLoaded ? 1 : 0,
-                  scale: logoLoaded ? 1 : 1.2
-                }}
-                transition={{ duration: 1.5, delay: 1 }}
-              />
-            </div>
-          </motion.div>
+            <motion.div
+              className="relative w-80 h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] rounded-full overflow-hidden"
               style={{
                 background: 'radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%)',
                 backdropFilter: 'blur(10px)',
