@@ -112,6 +112,7 @@ const CinematicHero: React.FC = () => {
         </motion.div>
       </div>
     </section>
+  }
   );
 };
 
